@@ -10,11 +10,12 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
+			is(arr.length<=1){
 			  return -Infinity; // Return -Infinity if array is empty or has only 1 element
     }
 
-    let firstHighest = -Infinity;
-    let secondHighest = -Infinity;
+    let firstHighest = a[0];
+    let secondHighest = a[0];
 
     for (let num of arr) {
         if (num > firstHighest) {
