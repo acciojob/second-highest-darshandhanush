@@ -10,6 +10,26 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
+			  return -Infinity; // Return -Infinity if array is empty or has only 1 element
+    }
+
+    let firstHighest = -Infinity;
+    let secondHighest = -Infinity;
+
+    for (let num of arr) {
+        if (num > firstHighest) {
+            secondHighest = firstHighest;
+            firstHighest = num;
+        } else if (num > secondHighest && num !== firstHighest) {
+            secondHighest = num;
+        }
+    }
+
+    if (secondHighest === -Infinity) {
+        return -Infinity; // Return -Infinity if all elements are the same
+    } else {
+        return secondHighest;
+    }
 			
 		}
 
